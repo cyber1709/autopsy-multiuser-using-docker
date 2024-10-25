@@ -1,0 +1,15 @@
+# to be executed in git bash
+
+docker exec -it autopsy-solr bash
+
+# cd /tmp
+
+# curl -L https://sourceforge.net/projects/autopsy/files/CollaborativeServices/Solr/SOLR_${SOLR_VERSION}_AutopsyService.zip/download --output SOLR_${SOLR_VERSION}_AutopsyService.zip && \
+#     unzip SOLR_${SOLR_VERSION}_AutopsyService.zip
+
+cd /opt/solr
+
+
+bin/solr create_collection -c autopsy -d /tmp/SOLR_8.6.3_AutopsyService/solr-8.6.3/server/solr/configsets/AutopsyConfig/conf
+
+
