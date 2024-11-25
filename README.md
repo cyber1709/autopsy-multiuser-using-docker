@@ -26,8 +26,8 @@ This repository provides a `docker-compose.yml` configuration for deploying an A
 ### 1. Clone the Repository
 
 ```bash
-git clone <repository-url>
-cd <repository-folder>
+git clone git@github.com:cyber1709/autopsy-multiuser-using-docker.git
+cd autopsy-multiuser-using-docker
 ```
 
 ### 2. Build and Deploy Containers
@@ -37,8 +37,15 @@ Run the following command to build and start all services:
 ```bash
 docker-compose up -d --build
 ```
+### 3. Get bash of autopsy-solr container to load configurations
 
-### 3. Verify Services
+```bash
+docker exec -it autopsy-solr bash
+cd /opt/solr
+bin/solr create_collection -c autopsy -d /tmp/SOLR_8.6.3_AutopsyService/solr-8.6.3/server/solr/configsets/AutopsyConfig/conf
+```
+
+### 4. Verify Services
 
 Check the status of the containers:
 
