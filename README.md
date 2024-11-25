@@ -1,6 +1,6 @@
 # Autopsy Multi-User Deployment Using Docker
 
-This repository provides a `docker-compose.yml` configuration for deploying an Autopsy multi-user environment. The deployment includes Zookeeper, Solr, ActiveMQ, PostgreSQL, and a Samba file share server.
+This repository provides a `docker-compose.yml` configuration for deploying an Autopsy multi-user environment. It is a simple docker implementation which can be installed on any VM or cloud environment which supports Docker. The deployment includes various opensource utilities like Zookeeper, Solr, ActiveMQ, PostgreSQL, and a Samba file share server.
 
 ## Prerequisites
 
